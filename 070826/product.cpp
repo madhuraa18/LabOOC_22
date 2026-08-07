@@ -1,42 +1,50 @@
-#include<iostream>
-#include<string>
+#include <iostream>
 using namespace std;
-class product
+
+class Product
 {
-  private:
-   string pr_name;
-   int id;
-   int quantity;
-   float salary;
+private:
+    int productId;
+    string productName;
+    int quantity;
+    float price;
+    float billAmount;
 
- public:
-   void inputDetails()
-   {
-        cout << "Enter ID: ";
-        cin >> id;
-
-        cout << "Enter Designation: ";
-        cin >> designation;
-
-        cout << "Enter Salary: ";
-        cin >> salary;
-    }
-
-    void displayDetails() const
+public:
+    void inputDetails()
     {
-        cout << "\n----- Employee Details -----\n";
-        cout << "Id      : " << id << endl;
-        cout << "Designation  : " << designation << endl;
-        cout << "Salary    : " << salary << endl;
+        cout << "Enter Product ID: ";
+        cin >> productId;
+
+        cout << "Enter Product Name: ";
+        cin >> productName;
+
+        cout << "Enter Quantity: ";
+        cin >> quantity;
+
+        cout << "Enter Price: ";
+        cin >> price;
+
+        billAmount = quantity * price;
     }
 
+    void displayDetails()
+    {
+        cout << "\n----- Product Details -----\n";
+        cout << "Product ID   : " << productId << endl;
+        cout << "Product Name : " << productName << endl;
+        cout << "Quantity     : " << quantity << endl;
+        cout << "Price        : " << price << endl;
+        cout << "Bill Amount  : " << billAmount << endl;
+    }
 };
+
 int main()
 {
-    employee s;
+    Product p;
 
-    s.inputDetails();
-    s.displayDetails();
+    p.inputDetails();
+    p.displayDetails();
 
     return 0;
 }
