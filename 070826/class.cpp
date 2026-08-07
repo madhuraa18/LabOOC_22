@@ -4,11 +4,12 @@ using namespace std;
 
 class Student
 {
+    //data function 
 private:
     string name;
     int rollNo;
     float marks;
-
+// member function
 public:
     void inputDetails()
     {
@@ -33,10 +34,15 @@ public:
 
 int main()
 {
-    Student s;
+    Student s,s1,s2;
 
     s.inputDetails();
     s.displayDetails();
+    s1.inputDetails();
+    s1.displayDetails();
+    s2.inputDetails();
+    s2.displayDetails();
+
 
     return 0;
 }
