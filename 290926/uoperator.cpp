@@ -22,7 +22,7 @@ public:
 };
 
 int main() {
-    Distance d1(8, 9);
+    Distance d1(12, 23); 
 
     // Using (-) unary operator
     -d1;
