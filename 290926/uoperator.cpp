@@ -12,9 +12,16 @@ public:
     }
 
     // Overloading (-) unary operator
-    void operator-() {
-        feet--;
-        inch--;
+    void operator+() {
+        feet=100;
+        inch=500;
+
+        cout << "\nFeet & Inches(Decrement): "
+             << feet << "'" << inch;
+    }
+    void operator++() {
+        feet=100;
+        inch=500;
 
         cout << "\nFeet & Inches(Decrement): "
              << feet << "'" << inch;
@@ -22,10 +29,13 @@ public:
 };
 
 int main() {
-    Distance d1(12, 23); 
-
+    Distance d1(8,9); 
+    cout<< d1.feet<<d1.inch <<endl;
+    
     // Using (-) unary operator
-    -d1;
+    +d1;
+    cout<< d1.feet<<d1.inch;
+    ++d1;
 
     return 0;
 }
