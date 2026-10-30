@@ -18,14 +18,15 @@ public:
     }
 
     // Overloading (+) operator
-    Distance operator+(Distance& d2) {
+    void operator+(Distance& d2) {
         // Create object to store result
-        Distance d3;
+        // Distance d3;
 
-        d3.feet = this->feet + d2.feet;
-        d3.inch = this->inch + d2.inch;
-
-        return d3;
+        this-> feet = this->feet + this ->feet;
+        this->inch = this->inch + this ->inch;
+        cout<<"This is:"<< this-> feet<< endl;
+        cout<<"d2 is:"<< d2.feet<<endl;
+        // return d3;
     }
 };
 
